@@ -1,0 +1,153 @@
+@font-face {
+font-family: "retro";
+src: url(C:/xampp/htdocs/proyecto/fonts/px_sans_nouveaux.ttf) format("truetype");
+
+
+}
+
+* {
+  font-family: "retro"
+}
+
+body {
+  background: #1A1A1B;
+  margin: 0;
+  padding: 0;
+}
+
+
+.login_box {
+  width: 320px;
+  height: 420px;
+  background: #000;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+
+}
+
+
+.login_box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.login_box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login_box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login_box input[type="text"],
+.login_box input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login_box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  background: #1A1A1B;
+
+}
+
+.login_box a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.login_box a:hover {
+  color: #fff;
+}
+
+
+/*css para el registro*/
+
+
+.diseño {
+  width: 320px;
+  height: 600px;
+  background: #000;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+
+}
+
+
+.diseño label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.diseño h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.diseño input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.diseño input[type="text"],
+.diseño input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.diseño input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  background: #1A1A1B;
+
+}
+
+.diseño a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.diseño a:hover {
+  color: #fff;
+}

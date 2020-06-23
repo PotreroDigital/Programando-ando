@@ -1,0 +1,27 @@
+@font-face {
+font-family: "retro";
+src: url(C:/xampp/htdocs/proyecto/fonts/px_sans_nouveaux.ttf) format("truetype");
+}
+
+body {
+  background: #000;
+}
+
+.comentario {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+
+  font-family: "retro";
+}
+
+.comentario textarea {
+  border-radius: 30px;
+  margin: auto;
+  width: 436px;
+  height: 142px;
+
+}

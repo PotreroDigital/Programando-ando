@@ -1,0 +1,82 @@
+@font-face {
+font-family: "retro";
+src: url(C:/xampp/htdocs/proyecto/fonts/px_sans_nouveaux.ttf) format("truetype");
+}
+
+* {
+  font-family: "retro"
+}
+
+.nav__responsive-ul {
+  display: none;
+}
+
+.nav {
+  background-color: #1a1a1b;
+
+}
+.nav__li {
+  display: inline-block;
+  padding: 15px;
+  color: #fff;
+
+
+}
+
+body {
+  background-color: #000;
+}
+
+.nav__li a {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+
+
+.nav__li:hover > a {
+  color: #ccc;
+}
+
+
+textarea {
+    resize: none;
+    height: 183px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+
+.flex__container-buttom {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 200px;
+  transform: translate(322px);
+}
+
+
+.flex__container {
+  display: flex;
+  width: 598px;
+  height: 366px;
+
+
+}
+
+.flex__container {
+  margin: auto;
+  background-color: #1a1a1b;
+}
+
+
+
+.panel {
+  background-color: green;
+  width: 50px;
+  height: 50px;
+  padding: 100px;
+
+
+}
