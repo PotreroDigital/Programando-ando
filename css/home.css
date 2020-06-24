@@ -2,10 +2,15 @@
   font-weight: 100;
 
 }
+html {
+  min-height: 100%;
+  position: relative;
+}
 
 body {
-  background: radial-gradient(circle, #fff, #bbb);
-
+  background: #red;
+  margin: 0;
+  margin-bottom: 40pX;
 
 }
 
@@ -19,13 +24,11 @@ body {
   "left main right"
   "footer footer footer";
   grid-template-rows: repeat(auto-fill, 1fr);
-  height: 100vh;
+
+
 
 }
 
-ul li {
-  display: inline-block;
-}
 
 
 .grid-item {
@@ -34,27 +37,84 @@ ul li {
 
 .grid-footer {
   background-color: #6f9;
-  grid-area: footer
+  grid-area: footer;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+
 }
 
 .grid-header {
-  background-color: #f96;
+  background-color: #1A1A1B;
   grid-area: header;
-  padding: 15px;
+
 
 }
 
 .grid-main {
   background-color: #69f;
-  grid-area: main
+  grid-area: main;
+  height: 100vh;
+  box-sizing: border-box;
+
 }
 
 .grid-aside  {
-  background-color: #999;
+  background-color: #030303;
   grid-area: left
 }
 
 .grid-derecha {
-  background-color: #999;
+  background-color: #030303;
   grid-area: right
+}
+
+.grid-header__li {
+  display: inline-block;
+  padding: 15px;
+  color: #fff;
+
+}
+
+.grid-header__li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.grid-header__li:hover > a {
+  color: #ccc;
+}
+
+.caja1 {
+  background-color: #1A1A1B;
+  display:block;
+  box-sizing: border-box;
+  height: 180px;
+  width: 590px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+
+}
+
+.caja2 {
+  background-color: #1A1A1B;
+  display: block;
+  box-sizing: border-box;
+  height: 180px;
+  width: 590px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.derecha__caja {
+  background-color: yellow;
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  height: 500px;
+  width: 200px;
 }
