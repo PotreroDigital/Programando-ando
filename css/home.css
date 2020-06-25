@@ -5,16 +5,22 @@
 html {
   min-height: 100%;
   position: relative;
+
 }
+
 
 body {
   background: #red;
   margin: 0;
-  margin-bottom: 40pX;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
 
 }
 
 .grid-container {
+  min-height: 100vh;
   display: grid;
   background: #444;
   grid-template-areas:
@@ -22,8 +28,12 @@ body {
   "left main right"
   "left main right"
   "left main right"
+  "left main right"
   "footer footer footer";
-  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-template-rows: 100px repeat(4, 1fr) ;
+  grid-template-columns: repeat(auto-fit, 1fr);
+
+
 
 
 
@@ -33,15 +43,18 @@ body {
 
 .grid-item {
   padding: 20px;
+
+
+
   }
 
 .grid-footer {
-  background-color: #6f9;
+  background-color: #1A1A1B;
   grid-area: footer;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 40px;
+  height: 100px;
 
 }
 
@@ -53,10 +66,12 @@ body {
 }
 
 .grid-main {
-  background-color: #69f;
+  background-color: #030303;
   grid-area: main;
-  height: 100vh;
   box-sizing: border-box;
+
+
+
 
 }
 
@@ -95,26 +110,82 @@ body {
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
+  color: #fff;
+  border: 0.5px solid grey;
 
 
 }
 
-.caja2 {
+.caja1 title {
+  color: #fff;
+}
+
+
+.derecha__caja {
   background-color: #1A1A1B;
   display: block;
   box-sizing: border-box;
-  height: 180px;
-  width: 590px;
+  border-bottom: 0.5px solid grey;
   margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  height: 420px;
+  width: 310px;
+  color: #fff;
+  border: 0.5px solid grey;
+
+
 }
 
-.derecha__caja {
-  background-color: yellow;
-  display: block;
+.space-box {
+  background-color:  ##1A1A1B;
+  display:block;
   box-sizing: border-box;
+  height: 120px;
+  width: 590px;
   margin: auto;
-  height: 500px;
-  width: 200px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+
+
+}
+
+.caja1-h3 {
+  padding: 20px;
+}
+
+.caja1-h3 a {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.derecha__caja li h3 {
+
+  font-size: 30px;
+  padding: 5px;
+  margin: 10px;
+
+
+}
+
+.derecha__caja li {
+
+    list-style: none;
+    border: 0.5px solid grey;
+}
+
+.derecha__caja li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.derecha__caja-hr {
+  color: red;
+}
+
+.derecha__caja-li:hover > a {
+  color: #ccc;
 }
