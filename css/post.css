@@ -9,15 +9,6 @@ html {
 }
 
 
-body {
-  background: #red;
-  margin: 0;
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-
-}
 
 .grid-container {
   min-height: 100vh;
@@ -33,18 +24,12 @@ body {
   grid-template-rows: 100px repeat(4, 1fr) ;
   grid-template-columns: repeat(auto-fit, 1fr);
 
-
-
-
-
 }
 
 
 
 .grid-item {
   padding: 20px;
-
-
 
   }
 
@@ -105,8 +90,8 @@ body {
   background-color: #1A1A1B;
   display:block;
   box-sizing: border-box;
-  height: 180px;
-  width: 590px;
+  height: auto;
+  width: 780px;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -148,15 +133,21 @@ body {
 
 }
 
-.main-content__caja1-h2 {
-  padding: 20px;
+.main-content__caja1 {
+  padding: 12px;
 }
 
-.main-content__caja1-h2 a {
+.main-content__caja1-h2  {
   color: #fff;
-  text-decoration: none;
+
 
 }
+
+.main-content__caja1-p {
+  font-size: 20px;
+  padding-top: 6px;
+}
+
 
 .derecha__caja li h3 {
 
