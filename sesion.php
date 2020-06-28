@@ -1,22 +1,28 @@
 <?php
-if ($conexion = mysqli_connect("127.0.0.1", "root", "")) {
 
-  $usuario = $_POST["user"];
-  $contraseña = $_POST["pass"];
+$usuario = $_POST["user"];
+$contraseña = $_POST["pass"];
+
+if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
 
   mysqli_select_db($conexion, "prueba");
-  $consulta = "SELECT*FROM usuarios";
-  $dato = mysqli_query($conexion, $consulta);
+  if ($q= "SELECT*FROM usuarios WHERE usuario='$usuario' AND contraseña='$contraseña'") {
+    $reg= mysqli_query($conexion, $q);
+    $datos= mysqli_fetch_array($reg);
 
-  while ($datos = mysqli_fetch_array($dato)) {
-    if ($datos["usuario"] == $usuario and $datos["contraseña"] == $contraseña) {
-      echo "sesion iniciada";
+    if  ($datos["usuario"] != $usuario or $datos["contraseña"] != $contraseña ){
+      echo "Usuario o Contraseña incorrecta";
+    } elseif ($datos["usuario"] == $usuario && $datos["contraseña"] == $contraseña ) {
+
+          echo "hola ;)";
+
     } else {
-      echo "error al iniciar sesion";
+      echo "contraseña incorrecta";
     }
-  } 
 
-
+  } else {
+    echo "error al enviar consulta";
+  };
 
 
 } else {
