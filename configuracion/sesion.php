@@ -13,11 +13,13 @@ if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
     if  ($datos["usuario"] != $usuario or $datos["contraseña"] != $contraseña ){
       echo "Usuario o Contraseña incorrecta";
     } elseif ($datos["usuario"] == $usuario && $datos["contraseña"] == $contraseña ) {
+      session_start();
+      $_SESSION["pass"] = $contraseña;
 
-          echo "hola ;)";
+      header("Location: ../home.php");
 
     } else {
-      echo "contraseña incorrecta";
+      echo "datos no registrados";
     }
 
   } else {
