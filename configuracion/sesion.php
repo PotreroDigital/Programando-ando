@@ -14,6 +14,7 @@ if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
       echo "Usuario o Contraseña incorrecta";
     } elseif ($datos["usuario"] == $usuario && $datos["contraseña"] == $contraseña ) {
       session_start();
+      $_SESSION["user"] = $usuario;
       $_SESSION["pass"] = $contraseña;
 
       header("Location: ../home.php");

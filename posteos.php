@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (empty($_SESSION["pass"])) {
+  echo "no iniciaste sesion";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,16 +22,16 @@
     <div class="grid-container">
       <div class="grid-item grid-header">
         <ul class="grid-header__ul">
-          <li class="grid-header__li"><a href="#">Inicio</a></li>
+          <li class="grid-header__li"><a href="home.php">Inicio</a></li>
           <li class="grid-header__li"><a href="#">Temas</a></li>
-          <li class="grid-header__li"><a href="#">Mi Perfil</a></li>
-          <li class="grid-header__li"><a href="#">Cerrar Sesion</a></li>
+          <li class="grid-header__li"><a href="perfil.php">Mi Perfil</a></li>
+          <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>
       </div>
       <div class="grid-item grid-main">
         <div class="main-content">
            <div class="main-content__caja1">
-             <form class="main-content__caja1-form" action="index.html" method="post">
+             <form class="main-content__caja1-form" action="configuracion/post_config.php " method="post">
                <input type="text" name="titulo" value="" placeholder="titulo">
                <input type="text" name="lenguaje" value="" placeholder="lenguaje">
                <textarea name="contenido" rows="8" cols="80"></textarea>

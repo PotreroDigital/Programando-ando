@@ -26,7 +26,9 @@ if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
   mysqli_select_db($conexion, "prueba");
   $consulta = "INSERT INTO usuarios (id, nombre, apellido, usuario, correo , contraseña)  VALUES ('', '$nombre', '$apellido', '$user', '$correo', '$password')";
   $repit = "SELECT * FROM usuarios";
+  $user_post = "INSERT INTO usuarios (usuario) VALUES ($user)";
   $consulta2 = mysqli_query($conexion, $repit);
+
 
 
   while ($repetido = mysqli_fetch_array($consulta2)) {
@@ -40,6 +42,7 @@ if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
   }
 
   if (mysqli_query($conexion, $consulta)) {
+    
     echo "usuario almacenado en la base de datos";
 
   } else {

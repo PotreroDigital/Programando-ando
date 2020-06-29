@@ -3,8 +3,12 @@
   if (empty($_SESSION["pass"])) {
     echo "sesion no iciada";
     exit();
-  };
+  }
 
+  if($q=mysqli_connect("127.0.0.1", "root", "")) {
+    mysqli_select_db($q, "prueba");
+    $consulta = "SELECT titulo FROM post2";
+    mysqli_query($q, $consulta);
  ?>
 
 
@@ -30,28 +34,18 @@
         </ul>
       </div>
       <div class="grid-item grid-main">
+        <?php
+        while ($row = mysqli_fetch_array($consulta)) {
+
+
+          ?>
         <div class="main-content">
           <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2"><a href="#">hola buenas les traigo tips que podran utilizar con css, espero que les guste</a></h3>
+              <h2 class="main-content__caja1-h2"><?php $consulta["titulo"]; ?><a href="#"></a></h3>
           </div>
-          <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2"><a href="#">hola buenas les traigo tips que podran utilizar con css, espero que les guste</a></h3>
-          </div>
-          <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2"><a href="#">hola buenas les traigo tips que podran utilizar con css, espero que les guste</a></h3>
-          </div>
-          <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2"><a href="#">hola buenas les traigo tips que podran utilizar con css, espero que les guste</a></h3>
-          </div>
-          <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2"><a href="#">hola buenas les traigo tips que podran utilizar con css, espero que les guste</a></h3>
-          </div>
-          <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2"><a href="#">hola buenas les traigo tips que podran utilizar con css, espero que les guste</a></h3>
-          </div>
-          <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2"><a href="#">hola buenas les traigo tips que podran utilizar con css, espero que les guste</a></h3>
-          </div>
+          <?php
+              };
+              ?>
 
 
             <div class="space-box"></div>
