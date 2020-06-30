@@ -1,14 +1,15 @@
 <?php
   session_start();
   if (empty($_SESSION["pass"])) {
-    echo "sesion no iciada";
-    exit();
+      echo "sesion no iciada";
+      exit();
   }
 
   if($q=mysqli_connect("127.0.0.1", "root", "")) {
-    mysqli_select_db($q, "prueba");
-    $consulta = "SELECT titulo FROM post2";
-    mysqli_query($q, $consulta);
+      mysqli_select_db($q, "prueba");
+      $consulta = "SELECT * FROM post2";
+      $orden= mysqli_query($q, $consulta);
+    };
  ?>
 
 
@@ -34,19 +35,17 @@
         </ul>
       </div>
       <div class="grid-item grid-main">
-        <?php
-        while ($row = mysqli_fetch_array($consulta)) {
 
-
-          ?>
         <div class="main-content">
-          <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2"><?php $consulta["titulo"]; ?><a href="#"></a></h3>
-          </div>
-          <?php
-              };
-              ?>
+      <?php
+      while ($datos = mysqli_fetch_array($orden)) {
 
+        echo '<div class="main-content__caja1">
+                  <h2 class="main-content__caja1-h2"><a  href="post.php?id='.$datos['id'].'">'.$datos['titulo'].'</a></h2>
+              </div>';
+
+      }
+        ?>
 
             <div class="space-box"></div>
 

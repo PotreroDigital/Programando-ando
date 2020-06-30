@@ -1,3 +1,24 @@
+<?php
+if ($q= mysqli_connect("127.0.0.1", "root", "")) {
+    $id = (int) $_GET["id"];
+    mysqli_select_db($q, "prueba");
+
+
+
+
+
+} else {
+  echo "error al conectar a base de datos";
+}
+
+
+
+
+
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,11 +41,22 @@
       </div>
       <div class="grid-item grid-main">
         <div class="main-content">
-           <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2">Esto es un Post de prueba</h2>
-                <p class="main-content__caja1-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-           </div>
+          <?php
+          $consulta = "SELECT * FROM post2 WHERE id=$id";
+              if ($reg = mysqli_query($q, $consulta)) {
+                $datos = mysqli_fetch_array($reg);
 
+
+              } else {
+                echo "error al enviar consulta";
+              }
+          echo'
+        <div class="main-content__caja1">
+          <h2 class="main-content__caja1-h2"> '.$datos["titulo"].'</h2>
+          <p class="main-content__caja1-p"> '.$datos["contenido"].'</p>
+        </div>';
+
+        ?>
           <div class="space-box"></div>
 
         </div>

@@ -56,7 +56,7 @@
           <h3>Nombre Usuario</h3>
         </div>
         <div class="derecha__perfil-post">
-          <a href="#">New Post</a>
+          <a href="posteos.php">New Post</a>
         </div>
 
         <div class="derecha__caja">
