@@ -1,18 +1,15 @@
 <?php
 if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
 
-  $nombre = $_POST["nombre"];
-  $apellido = $_POST["apellido"];
   $user = $_POST["user"];
   $correo = $_POST["correo"];
   $password = $_POST["pass"];
 
   $array = array(
-    'nombre' => $nombre,
-    "apellido" => $apellido,
     "user" => $user,
     "correo" => $correo,
     "pass" => $password);
+
 
   foreach ($array as $key => $value) {
           if (empty($value)) {
@@ -24,7 +21,7 @@ if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
 };
 
   mysqli_select_db($conexion, "prueba");
-  $consulta = "INSERT INTO usuarios (id, nombre, apellido, usuario, correo , contraseña)  VALUES ('', '$nombre', '$apellido', '$user', '$correo', '$password')";
+  $consulta = "INSERT INTO usuarios (id, usuario, correo , contraseña)  VALUES ('', '$user', '$correo', '$password')";
   $repit = "SELECT * FROM usuarios";
   $user_post = "INSERT INTO usuarios (usuario) VALUES ($user)";
   $consulta2 = mysqli_query($conexion, $repit);
@@ -42,7 +39,7 @@ if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
   }
 
   if (mysqli_query($conexion, $consulta)) {
-    
+
     echo "usuario almacenado en la base de datos";
 
   } else {

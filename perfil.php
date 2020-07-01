@@ -23,7 +23,7 @@
     <div class="grid-container">
       <div class="grid-item grid-header">
         <ul class="grid-header__ul">
-          <li class="grid-header__li"><a href="#">Inicio</a></li>
+          <li class="grid-header__li"><a href="home.php">Inicio</a></li>
           <li class="grid-header__li"><a href="#">Temas</a></li>
           <li class="grid-header__li"><a href="#">Mi Perfil</a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
@@ -63,8 +63,9 @@
           <ul>
 
 
-            <li class="derecha__caja-li"><a href="#">Editar Perfil</a></li>
-            <li class="derecha__caja-li"><a href="#">Cerrar Sesion</a></li>
+            <li class="derecha__caja-li"><a href="editar_perfil.html">Editar Perfil</a></li>
+            <li class="derecha__caja-li"><a href="editar_perfil.html">eliminar cuenta</a></li>
+            <li class="derecha__caja-li"><a href="deslogueo.php">Cerrar Sesion</a></li>
           </ul>
         </div>
         <div class="derecha__perfil-box">
