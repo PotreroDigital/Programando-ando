@@ -64,8 +64,8 @@
 
 
             <li class="derecha__caja-li"><a href="editar_perfil.html">Editar Perfil</a></li>
-            <li class="derecha__caja-li"><a href="editar_perfil.html">eliminar cuenta</a></li>
-            <li class="derecha__caja-li"><a href="deslogueo.php">Cerrar Sesion</a></li>
+            <li class="derecha__caja-li"><a href="borrar.php">eliminar cuenta</a></li>
+            <li class="derecha__caja-li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
           </ul>
         </div>
         <div class="derecha__perfil-box">
