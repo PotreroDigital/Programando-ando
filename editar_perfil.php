@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  if (empty($_SESSION["pass"])) {
+      echo "sesion no iciada";
+      exit();
+  }
+
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,7 +25,7 @@
         <ul class="grid-header__ul">
           <li class="grid-header__li"><a href="home.php">Inicio</a></li>
           <li class="grid-header__li"><a href="#">Temas</a></li>
-          <li class="grid-header__li"><a href="perfil.php">Mi Perfil</a></li>
+          <li class="grid-header__li"><a href="perfil.php"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>
       </div>

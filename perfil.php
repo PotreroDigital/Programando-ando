@@ -4,8 +4,17 @@
     echo "sesion no iciada";
     exit();
   };
+  $user = $_SESSION["user"];
+  if ($conexion = mysqli_connect("127.0.0.1", "root", "")) {
+    mysqli_select_db($conexion, "prueba");
+    $consulta = "SELECT * FROM post2 WHERE user_name='$user'";
+    $reg = mysqli_query($conexion, $consulta);
 
- ?>
+  } else {
+    echo "error al conectar a base de datos";
+  }
+
+?>
 
 
 
@@ -25,7 +34,7 @@
         <ul class="grid-header__ul">
           <li class="grid-header__li"><a href="home.php">Inicio</a></li>
           <li class="grid-header__li"><a href="#">Temas</a></li>
-          <li class="grid-header__li"><a href="#">Mi Perfil</a></li>
+          <li class="grid-header__li"><a href="#"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>
       </div>
@@ -35,9 +44,14 @@
             <h1>Mis Post</h1>
 
           </div>
-          <div class="main-content__caja1">
-              <h2 class="main-content__caja1-h2"><a href="#">hola buenas les traigo tips que podran utilizar con css, espero que les guste</a></h3>
-          </div>
+          <?php
+            while ($datos = mysqli_fetch_array($reg)) {
+
+              echo '<div class="main-content__caja1">
+                <h2 class="main-content__caja1-h2"><a href="post.php?id='.$datos['id'].'">'.$datos["titulo"].'</a></h3>
+                </div>';
+            }
+           ?>
 
 
             <div class="space-box"></div>

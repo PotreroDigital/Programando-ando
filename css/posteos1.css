@@ -145,6 +145,21 @@ html {
   padding: 5px;
 }
 
+.main-content__caja1-select {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #1A1A1B;
+  color: #fff;
+
+  padding: 5px;
+  height: 40px;
+  width: 140px;
+  border: none;
+  border: 0.5px solid grey;
+  transform: translate(450px);
+
+}
+
 .caja1 title {
   color: #fff;
 }

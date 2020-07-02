@@ -11,7 +11,7 @@ if ($q = mysqli_connect("127.0.0.1", "root", "")) {
   mysqli_select_db($q, "prueba");
   $datos = "INSERT INTO post2(id, titulo, lenguaje, contenido, user_name) VALUES ('', '$titulo', '$lenguaje', '$contenido', '$user')";
   if(mysqli_query($q, $datos)) {
-    echo "post almacenado en base de datos";
+    header("location: ../public_post.php");
   } else {
     echo "error al almacenar";
   }

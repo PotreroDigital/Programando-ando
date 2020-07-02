@@ -1,18 +1,11 @@
 <?php
+session_start();
 if ($q= mysqli_connect("127.0.0.1", "root", "")) {
     $id = (int) $_GET["id"];
     mysqli_select_db($q, "prueba");
-
-
-
-
-
 } else {
   echo "error al conectar a base de datos";
 }
-
-
-
 
 
  ?>
@@ -35,7 +28,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
         <ul class="grid-header__ul">
           <li class="grid-header__li"><a href="home.php">Inicio</a></li>
           <li class="grid-header__li"><a href="temas.php">Temas</a></li>
-          <li class="grid-header__li"><a href="perfil.php">Mi Perfil</a></li>
+          <li class="grid-header__li"><a href="perfil.php"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>
       </div>
@@ -53,6 +46,9 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
           echo'
         <div class="main-content__caja1">
           <h2 class="main-content__caja1-h2"> '.$datos["titulo"].'</h2>
+          <br>
+          <h3 class="main-content__caja1-h2"> Post by '.$datos["user_name"].'</h3>
+          <br>
           <p class="main-content__caja1-p"> '.$datos["contenido"].'</p>
         </div>';
 

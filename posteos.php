@@ -2,7 +2,7 @@
 session_start();
 
 if (empty($_SESSION["pass"])) {
-  echo "no iniciaste sesion";
+  header("location: inicio.html");
 }
 
 ?>
@@ -13,7 +13,7 @@ if (empty($_SESSION["pass"])) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/posteos.css">
+    <link rel="stylesheet" type="text/css" href="css/posteos1.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
     <title>Posteos</title>
@@ -24,7 +24,7 @@ if (empty($_SESSION["pass"])) {
         <ul class="grid-header__ul">
           <li class="grid-header__li"><a href="home.php">Inicio</a></li>
           <li class="grid-header__li"><a href="#">Temas</a></li>
-          <li class="grid-header__li"><a href="perfil.php">Mi Perfil</a></li>
+          <li class="grid-header__li"><a href="perfil.php"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>
       </div>
@@ -33,8 +33,15 @@ if (empty($_SESSION["pass"])) {
            <div class="main-content__caja1">
              <form class="main-content__caja1-form" action="configuracion/post_config.php " method="post">
                <input type="text" name="titulo" value="" placeholder="titulo">
-               <input type="text" name="lenguaje" value="" placeholder="lenguaje">
-               <textarea name="contenido" rows="8" cols="80"></textarea>
+               <textarea name="contenido" rows="8" cols="180"></textarea>
+               <select class="main-content__caja1-select" name="lenguaje">
+                 <option value="Javascript">Javascript</option>
+                 <option value="PHP">PHP</option>
+                 <option value="Python">Python</option>
+                 <option value="C">C</option>
+                 <option value="C++">C++</option>
+
+               </select>
                <input type="submit" name="" value="post">
 
              </form>
