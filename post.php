@@ -1,8 +1,18 @@
 <?php
 session_start();
+$user_name = $_SESSION["user"];
 if ($q= mysqli_connect("127.0.0.1", "root", "")) {
-    $id = (int) $_GET["id"];
     mysqli_select_db($q, "prueba");
+    $consulta = "SELECT * FROM comentarios WHERE post_id=$id";
+        if ($reg = mysqli_query($q, $consulta)) {
+          $datos = mysqli_fetch_array($reg);
+
+
+
+        } else {
+          echo "error al enviar consulta";
+        }
+    $id = (int) $_GET["id"];
 } else {
   echo "error al conectar a base de datos";
 }
@@ -17,7 +27,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/post.css">
+    <link rel="stylesheet" type="text/css" href="css/post3.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
     <title>Post</title>
@@ -38,6 +48,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
           $consulta = "SELECT * FROM post2 WHERE id=$id";
               if ($reg = mysqli_query($q, $consulta)) {
                 $datos = mysqli_fetch_array($reg);
+                $post_id = $datos["id"];
 
 
               } else {
@@ -53,6 +64,33 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
         </div>';
 
         ?>
+
+
+        <div class="main-content__caja1">
+          <form class="main-content__caja1-form" action="configuracion/config_comment.php " method="post">
+            <h3>comentar</h3>
+            <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
+            <input type="hidden" name="name_user" value="<?php echo $user_name; ?>">
+            <textarea name="contenido" rows="8" cols="180"></textarea>
+
+            <input type="submit" name="" value="post">
+
+          </form>
+
+        </div>
+        <?php
+
+        echo'
+      <div class="main-content__caja1">
+        <h3 class="main-content__caja1-h2"> Comment by '.$datos["nombre_user"].'</h3>
+        <br>
+        <p class="main-content__caja1-p"> '.$datos["comentario"].'</p>
+      </div>';
+
+      ?>
+
+
+
           <div class="space-box"></div>
 
         </div>

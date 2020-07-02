@@ -101,6 +101,59 @@ html {
 
 }
 
+
+
+
+.main-content__caja1-form input[type="text"] {
+  width: 99%;
+  margin-bottom: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.main-content__caja1-form input[type="text"] {
+  border: none;
+  border-bottom: 0.5px solid grey;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #1A1A1B;
+}
+
+.main-content__caja1-form input[type="submit"] {
+  box-sizing: border-box;
+
+  padding: 5px;
+  background-color: #1A1A1B;
+  outline: none;
+  font-size: 22px;
+  color: #fff;
+  border: none;
+  height: 40px;
+  width: 140px;
+  border: 0.5px solid grey;
+  transform: translate(611px);
+}
+
+.main-content__caja1-form textarea {
+  resize: none;
+  margin: 4px;
+  width: 99%;
+  height: 150px;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  padding: 5px;
+}
+
+.main-content__caja1-form h3 {
+  margin-left: 2px;
+  margin-bottom: 1px;
+}
+
 .caja1 title {
   color: #fff;
 }
