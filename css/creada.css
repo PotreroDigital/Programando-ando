@@ -165,6 +165,18 @@ body {
 
 }
 
+
+.main-content__caja1-a1 {
+  box-sizing: border-box;
+  position: absolute;
+  transform: translate(230px);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+
+}
+
 .derecha__caja li h3 {
 
   font-size: 30px;

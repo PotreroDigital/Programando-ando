@@ -9,15 +9,6 @@ html {
 }
 
 
-body {
-  background: #red;
-  margin: 0;
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-
-}
 
 .grid-container {
   min-height: 100vh;
@@ -33,18 +24,12 @@ body {
   grid-template-rows: 100px repeat(4, 1fr) ;
   grid-template-columns: repeat(auto-fit, 1fr);
 
-
-
-
-
 }
 
 
 
 .grid-item {
   padding: 20px;
-
-
 
   }
 
@@ -105,8 +90,8 @@ body {
   background-color: #1A1A1B;
   display:block;
   box-sizing: border-box;
-  height: 180px;
-  width: 590px;
+  height: auto;
+  width: 780px;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -116,29 +101,57 @@ body {
 
 }
 
-.main-content__form-a {
-  width: 124px;
-  text-decoration: none;
-  box-sizing: border-box;
-  text-align: center;
-  color: #fff;
+
+
+
+.main-content__caja1-form input[type="text"] {
+  width: 99%;
+  margin-bottom: 20px;
   padding: 5px;
-  margin: 15px;
-  display: inline-block;
-  background: #478ba2;
-  transform: translate(100px);
+  margin: 5px;
 }
 
-.main-content__form-sub {
-  width: 124px;
+.main-content__caja1-form input[type="text"] {
   border: none;
-  box-sizing: border-box;
-  background: #478ba2;
+  border-bottom: 0.5px solid grey;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  margin-bottom: 15px;
   color: #fff;
-  display: inline-block;
+  font-size: 16px;
+  background-color: #1A1A1B;
+}
+
+.main-content__caja1-form input[type="submit"] {
+  box-sizing: border-box;
+
   padding: 5px;
-  transform: translate(150px);
-  margin: 15px;
+  background-color: #1A1A1B;
+  outline: none;
+  font-size: 22px;
+  color: #fff;
+  border: none;
+  height: 40px;
+  width: 140px;
+  border: 0.5px solid grey;
+  transform: translate(611px);
+}
+
+.main-content__caja1-form textarea {
+  resize: none;
+  margin: 4px;
+  width: 99%;
+  height: 150px;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  padding: 5px;
+}
+
+.main-content__caja1-form h3 {
+  margin-left: 2px;
+  margin-bottom: 1px;
 }
 
 .caja1 title {
@@ -152,7 +165,7 @@ body {
   box-sizing: border-box;
   border-bottom: 0.5px solid grey;
   margin: auto;
-  height: 420px;
+  height: auto;
   width: 310px;
   color: #fff;
   border: 0.5px solid grey;
@@ -173,16 +186,22 @@ body {
 
 }
 
-.main-content__caja1-h2 {
-  padding: 20px;
-  text-align: center;
+.main-content__caja1 {
+  padding: 12px;
 }
 
-.main-content__caja1-h2 a {
+.main-content__caja1-h2  {
   color: #fff;
-  text-decoration: none;
+
 
 }
+
+.main-content__caja1-p {
+  font-size: 20px;
+  padding-top: 6px;
+  word-break: break-all;
+}
+
 
 .derecha__caja li h3 {
 

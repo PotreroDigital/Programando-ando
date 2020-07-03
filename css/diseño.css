@@ -50,8 +50,19 @@ body {
   margin-bottom: 20px;
 }
 
-.login_box input[type="text"],
-.login_box input[type="password"], {
+
+
+.login_box input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login_box input[type="password"] {
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;

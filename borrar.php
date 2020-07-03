@@ -19,10 +19,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/borrar.css">
+    <link rel="stylesheet" type="text/css" href="css/borrar1.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
-    <title>inicio</title>
+    <title>Eliminar</title>
   </head>
   <body>
     <div class="grid-container">

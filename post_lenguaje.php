@@ -8,7 +8,7 @@
 
   if($q=mysqli_connect("127.0.0.1", "root", "")) {
       mysqli_select_db($q, "prueba");
-      $consulta = "SELECT * FROM post2 WHERE lenguaje='$lenguaje'";
+      $consulta = "SELECT * FROM post2 WHERE lenguaje='$lenguaje' ORDER BY id DESC";
       $orden= mysqli_query($q, $consulta);
     };
  ?>
@@ -20,7 +20,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/home9.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
     <title>inicio</title>
@@ -64,12 +64,10 @@
           <ul>
 
             <li><h3>Links relacionados</h3></li>
-            <li class="derecha__caja-li"><a href="#">php.net</a></li>
-            <li class="derecha__caja-li"><a href="#">xataka.com</a></li>
-            <li class="derecha__caja-li"><a href="#">MDN web docs</a></li>
-            <li class="derecha__caja-li"><a href="#">link 1</a></li>
-            <li class="derecha__caja-li"><a href="#">link 1</a></li>
-            <li class="derecha__caja-li"><a href="#">link 1</a></li>
+            <li class="derecha__caja-li"><a href="https://www.php.net">php.net</a></li>
+            <li class="derecha__caja-li"><a href="https://www.python.org/doc/">Python</a></li>
+            <li class="derecha__caja-li"><a href="https://developer.mozilla.org/es/">MDN web docs</a></li>
+            <li class="derecha__caja-li"><a href="https://docs.oracle.com/en/java/">Java</a></li>
           </ul>
         </div>
       </div>

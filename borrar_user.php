@@ -1,7 +1,10 @@
 <?php
   session_start();
-  if (empty($_SESSION["pass"])) {
-      echo "sesion no iciada";
+  if (empty($_SESSION["user"])) {
+    header("location: inicio.html");
+    exit();
+  }elseif ($_SESSION["level"] != 1) {
+      echo "acceso denegado";
       exit();
   }
 
@@ -24,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="css/borrar_user1.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
-    <title>inicio</title>
+    <title>Moderacion</title>
   </head>
   <body>
     <div class="grid-container">

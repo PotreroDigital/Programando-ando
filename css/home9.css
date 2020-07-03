@@ -157,7 +157,7 @@ body {
   box-sizing: border-box;
   border-bottom: 0.5px solid grey;
   margin: auto;
-  height: 420px;
+  height: auto;
   width: 310px;
   color: #fff;
   border: 0.5px solid grey;

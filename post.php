@@ -18,7 +18,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/post3.css">
+    <link rel="stylesheet" type="text/css" href="css/post5.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
     <title>Post</title>
@@ -28,7 +28,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
       <div class="grid-item grid-header">
         <ul class="grid-header__ul">
           <li class="grid-header__li"><a href="home.php">Inicio</a></li>
-          <li class="grid-header__li"><a href="lenguaje.php">TLenguajes</a></li>
+          <li class="grid-header__li"><a href="lenguajes.php">Lenguajes</a></li>
           <li class="grid-header__li"><a href="perfil.php"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>
@@ -51,8 +51,10 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
           <h2 class="main-content__caja1-h2"> '.$datos["titulo"].'</h2>
           <br>
           <h3 class="main-content__caja1-h2"> Post by '.$datos["user_name"].'</h3>
+          <h3 class="main-content__caja1-h2"> Lenguaje: '.$datos["lenguaje"].'</h3>
+
           <br>
-          <p class="main-content__caja1-p"> '.$datos["contenido"].'</p>
+          <p class="main-content__caja1-p" id="espacio"> '.$datos["contenido"].'</p>
         </div>';
 
         ?>
@@ -64,7 +66,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
             <input type="hidden" name="id_number" value="<?php echo $id_number; ?>">
             <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
             <input type="hidden" name="name_user" value="<?php echo $user_name; ?>">
-            <textarea name="contenido" rows="8" cols="180"></textarea>
+            <textarea name="contenido" rows="8" cols="180" required></textarea>
 
             <input type="submit" name="" value="post">
 
@@ -72,7 +74,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
 
         </div>
         <?php
-        $consulta = "SELECT * FROM comentarios WHERE post_id = '$id' ORDER BY id DESC";
+        $consulta = "SELECT * FROM comentarios WHERE post_id = '$id'";
             if ($reg = mysqli_query($q, $consulta)) {
 
               while ($datos = mysqli_fetch_array($reg)) {
@@ -110,12 +112,10 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
           <ul>
 
             <li><h3>Links relacionados</h3></li>
-            <li class="derecha__caja-li"><a href="#">php.net</a></li>
-            <li class="derecha__caja-li"><a href="#">xataka.com</a></li>
-            <li class="derecha__caja-li"><a href="#">MDN web docs</a></li>
-            <li class="derecha__caja-li"><a href="#">link 1</a></li>
-            <li class="derecha__caja-li"><a href="#">link 1</a></li>
-            <li class="derecha__caja-li"><a href="#">link 1</a></li>
+            <li class="derecha__caja-li"><a href="https://www.php.net">php.net</a></li>
+            <li class="derecha__caja-li"><a href="https://www.python.org/doc/">Python</a></li>
+            <li class="derecha__caja-li"><a href="https://developer.mozilla.org/es/">MDN web docs</a></li>
+            <li class="derecha__caja-li"><a href="https://docs.oracle.com/en/java/">Java</a></li>
           </ul>
         </div>
       </div>
