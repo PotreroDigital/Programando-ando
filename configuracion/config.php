@@ -40,7 +40,7 @@ if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
 
   if (mysqli_query($conexion, $consulta)) {
 
-    echo "usuario almacenado en la base de datos";
+    header("location: ../creada.html");
 
   } else {
   echo "error al almacenar usuario";

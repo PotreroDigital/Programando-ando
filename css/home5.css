@@ -2,7 +2,6 @@
   font-weight: 100;
 
 }
-
 html {
   min-height: 100%;
   position: relative;
@@ -35,12 +34,17 @@ body {
   grid-template-columns: repeat(auto-fit, 1fr);
 
 
+
+
+
 }
 
 
 
 .grid-item {
   padding: 20px;
+
+
 
   }
 
@@ -78,7 +82,7 @@ body {
 
 .grid-derecha {
   background-color: #030303;
-  grid-area: right;
+  grid-area: right
 }
 
 .grid-header__li {
@@ -93,28 +97,22 @@ body {
   text-decoration: none;
 }
 
+.main_a {
+  color: #ccc;
+}
+
+
 .grid-header__li:hover > a {
   color: #ccc;
 }
-.main-content__caja0 {
-  background-color: #1A1A1B;
-  display:block;
-  box-sizing: border-box;
-  height: auto;
-  width: 590px;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: #fff;
-  border: 0.5px solid grey;
 
-}
+
 
 .main-content__caja1 {
   background-color: #1A1A1B;
   display:block;
   box-sizing: border-box;
-  height: 180px;
+  height: auto;
   width: 590px;
   margin: auto;
   margin-top: 15px;
@@ -125,48 +123,16 @@ body {
 
 }
 
-
 .caja1 title {
   color: #fff;
-}
-
-
-.derecha__caja {
-
-  display: block;
-  box-sizing: border-box;
-  margin: auto;
-  margin-top: 15px;
-  height: 410px;
-  width: 310px;
-  color: #fff;
-
-}
-
-.derecha__perfil-name {
-  background-color: #1A1A1B;
-  display: block;
-  box-sizing: border-box;
-  border-bottom: 0.5px solid grey;
-  margin: auto;
-  height: auto;
-  width: 310px;
-  color: #fff;
-  border: 0.5px solid grey;
-}
-
-
-.derecha__perfil-name h3 {
-  padding: 15px;
-  font-size: 23px;
 }
 
 .derecha__perfil-post a  {
   background-color: #1A1A1B;
   display: block;
-
   margin: auto;
   margin-top: 15px;
+  margin-bottom: 15px;
   height: 100;
   width: 310px;
   color: #fff;
@@ -184,15 +150,18 @@ body {
 
 
 
-.derecha__perfil-box {
-  background-color: ##030303;
+.derecha__caja {
+  background-color: #1A1A1B;
   display: block;
-  box-sizing: border-box;
-  margin: auto;
   margin-top: 15px;
-  height: 120px;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid grey;
+  margin: auto;
+  height: 420px;
   width: 310px;
   color: #fff;
+  border: 0.5px solid grey;
+
 
 }
 
@@ -213,12 +182,6 @@ body {
   padding: 20px;
 }
 
-
-.main-content__caja0 h1 {
-  padding: 20px;
-}
-
-
 .main-content__caja1-h2 a {
   color: #fff;
   text-decoration: none;
@@ -230,12 +193,14 @@ body {
   font-size: 30px;
   padding: 5px;
   margin: 10px;
+
+
 }
 
 .derecha__caja li {
 
     list-style: none;
-    border-bottom: 0.5px solid grey;
+    border: 0.5px solid grey;
 }
 
 .derecha__caja li a {
@@ -247,7 +212,9 @@ body {
   margin: 10px;
 }
 
-
+.derecha__caja-hr {
+  color: red;
+}
 
 .derecha__caja-li:hover > a {
   color: #ccc;

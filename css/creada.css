@@ -49,7 +49,7 @@ body {
   }
 
 .grid-footer {
-  background-color: #1A1A1B;
+  background-color: #030303;
   grid-area: footer;
   position: absolute;
   bottom: 0;
@@ -59,7 +59,7 @@ body {
 }
 
 .grid-header {
-  background-color: #1A1A1B;
+  background-color: #030303;
   grid-area: header;
 
 
@@ -136,7 +136,7 @@ body {
 }
 
 .space-box {
-  background-color:  ##1A1A1B;
+  background-color:  #030303;
   display:block;
   box-sizing: border-box;
   height: 120px;
@@ -150,11 +150,18 @@ body {
 
 .main-content__caja1-h2 {
   padding: 20px;
+  text-align: center;
+  font-size: 50px;
 }
 
-.main-content__caja1-h2 a {
+.main-content__caja1-a {
+  box-sizing: border-box;
+  position: absolute;
+  transform: translate(210px);
   color: #fff;
   text-decoration: none;
+  text-align: center;
+  font-size: 25px;
 
 }
 

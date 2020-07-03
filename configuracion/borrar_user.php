@@ -6,7 +6,7 @@ $usuario = $_POST["id_user"];
 $q = "DELETE FROM usuarios WHERE usuario='$usuario'";
 
 if (mysqli_query($conexion, $q)) {
-    header("location: ../inicio.html")
+    header("location: deslogueo.php")
 } else {
     echo "error al eliminar usuario";
     echo $usuario;

@@ -28,7 +28,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
       <div class="grid-item grid-header">
         <ul class="grid-header__ul">
           <li class="grid-header__li"><a href="home.php">Inicio</a></li>
-          <li class="grid-header__li"><a href="temas.php">Temas</a></li>
+          <li class="grid-header__li"><a href="lenguaje.php">TLenguajes</a></li>
           <li class="grid-header__li"><a href="perfil.php"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>

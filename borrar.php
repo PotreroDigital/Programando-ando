@@ -1,9 +1,19 @@
 <?php
-session_start();
+  session_start();
+  if (empty($_SESSION["pass"])) {
+      echo "sesion no iciada";
+      exit();
+  }
 
-$user = $_SESSION["user"];
+
+  if($q=mysqli_connect("127.0.0.1", "root", "")) {
+      mysqli_select_db($q, "prueba");
+      $consulta = "SELECT * FROM usuarios";
+      $orden= mysqli_query($q, $consulta);
+    };
 
  ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -18,9 +28,9 @@ $user = $_SESSION["user"];
     <div class="grid-container">
       <div class="grid-item grid-header">
         <ul class="grid-header__ul">
-          <li class="grid-header__li"><a href="#">Inicio</a></li>
-          <li class="grid-header__li"><a href="temas.php">Temas</a></li>
-          <li class="grid-header__li"><a href="perfil.php">Mi Perfil</a></li>
+          <li class="grid-header__li"><a href="home.php">Inicio</a></li>
+          <li class="grid-header__li"><a href="lenguajes.php">Lenguaje</a></li>
+          <li class="grid-header__li"><a href="perfil.php"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>
       </div>

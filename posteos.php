@@ -23,7 +23,7 @@ if (empty($_SESSION["pass"])) {
       <div class="grid-item grid-header">
         <ul class="grid-header__ul">
           <li class="grid-header__li"><a href="home.php">Inicio</a></li>
-          <li class="grid-header__li"><a href="#">Temas</a></li>
+          <li class="grid-header__li"><a href="lenguaje.php">Lenguajes</a></li>
           <li class="grid-header__li"><a href="perfil.php"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>

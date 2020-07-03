@@ -6,7 +6,7 @@ mysqli_select_db($conexion, "prueba");
 $q = "DELETE FROM usuarios WHERE id='$dato'";
 
 if (mysqli_query($conexion, $q)) {
-    echo "usuario eliminado";
+    header("location: ../borrar_user.php");
 } else {
     echo "error al eliminar usuario";
 

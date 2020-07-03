@@ -23,7 +23,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/perfil.css">
+    <link rel="stylesheet" type="text/css" href="css/perfil2.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
     <title>Perfil</title>
@@ -33,7 +33,7 @@
       <div class="grid-item grid-header">
         <ul class="grid-header__ul">
           <li class="grid-header__li"><a href="home.php">Inicio</a></li>
-          <li class="grid-header__li"><a href="#">Temas</a></li>
+          <li class="grid-header__li"><a href="lenguaje.php">Lenguajes</a></li>
           <li class="grid-header__li"><a href="#"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>
@@ -67,7 +67,7 @@
 
       <div class="grid-item grid-derecha">
         <div class="derecha__perfil-name">
-          <h3>Nombre Usuario</h3>
+          <h3><?php echo $_SESSION["user"]; ?></h3>
         </div>
         <div class="derecha__perfil-post">
           <a href="posteos.php">New Post</a>

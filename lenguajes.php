@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/home5.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
     <title>inicio</title>
@@ -59,6 +59,9 @@
       </div>
 
       <div class="grid-item grid-derecha">
+        <div class="derecha__perfil-post">
+          <a href="posteos.php">New Post</a>
+        </div>
         <div class="derecha__caja">
           <ul>
 

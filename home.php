@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/home5.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
     <title>inicio</title>
@@ -28,7 +28,7 @@
     <div class="grid-container">
       <div class="grid-item grid-header">
         <ul class="grid-header__ul">
-          <li class="grid-header__li"><a href="#">Inicio</a></li>
+          <li class="grid-header__li"><a class="main_a"href="#">Inicio</a></li>
           <li class="grid-header__li"><a href="lenguajes.php">Lenguajes</a></li>
           <li class="grid-header__li"><a href="perfil.php"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
@@ -59,6 +59,10 @@
       </div>
 
       <div class="grid-item grid-derecha">
+        <div class="derecha__perfil-post">
+          <a href="posteos.php">New Post</a>
+        </div>
+
         <div class="derecha__caja">
           <ul>
 
