@@ -2,7 +2,6 @@
   font-weight: 100;
 
 }
-
 html {
   min-height: 100%;
   position: relative;
@@ -35,12 +34,17 @@ body {
   grid-template-columns: repeat(auto-fit, 1fr);
 
 
+
+
+
 }
 
 
 
 .grid-item {
   padding: 20px;
+
+
 
   }
 
@@ -78,7 +82,7 @@ body {
 
 .grid-derecha {
   background-color: #030303;
-  grid-area: right;
+  grid-area: right
 }
 
 .grid-header__li {
@@ -96,8 +100,9 @@ body {
 .grid-header__li:hover > a {
   color: #ccc;
 }
-.main-content__caja0 {
-  background-color: #1A1A1B;
+
+.main-content__caja1 {
+  background-color: #030303;
   display:block;
   box-sizing: border-box;
   height: auto;
@@ -106,25 +111,38 @@ body {
   margin-top: 15px;
   margin-bottom: 15px;
   color: #fff;
-  border: 0.5px solid grey;
+  border-bottom: 0.5px solid grey;
+
 
 }
 
-.main-content__caja1 {
-  background-color: #1A1A1B;
-  display:block;
+.main-content__caja1 p {
+  display: inline-block;
   box-sizing: border-box;
-  height: 180px;
-  width: 590px;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: #fff;
-  border: 0.5px solid grey;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.main-content__caja1-form {
+  display: inline-block;
+  padding: 5px;
+
 
 
 }
 
+
+.main-content__caja1-form input[type="submit"] {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+
+}
 
 .caja1 title {
   color: #fff;
@@ -132,67 +150,15 @@ body {
 
 
 .derecha__caja {
-
+  background-color: #030303;
   display: block;
   box-sizing: border-box;
   margin: auto;
-  margin-top: 15px;
-  height: 410px;
+  height: 420px;
   width: 310px;
   color: #fff;
 
-}
 
-.derecha__perfil-name {
-  background-color: #1A1A1B;
-  display: block;
-  box-sizing: border-box;
-  border-bottom: 0.5px solid grey;
-  margin: auto;
-  height: auto;
-  width: 310px;
-  color: #fff;
-  border: 0.5px solid grey;
-}
-
-
-.derecha__perfil-name h3 {
-  padding: 15px;
-  font-size: 23px;
-}
-
-.derecha__perfil-post a  {
-  background-color: #1A1A1B;
-  display: block;
-
-  margin: auto;
-  margin-top: 15px;
-  height: 100;
-  width: 310px;
-  color: #fff;
-  text-decoration: none;
-  padding: 20px;
-  font-size: 25px;
-  color: #fff;
-  text-align: center;
-
-}
-
-.derecha__perfil-post:hover > a {
-  border: 0.5px solid grey;
-}
-
-
-
-.derecha__perfil-box {
-  background-color: ##030303;
-  display: block;
-  box-sizing: border-box;
-  margin: auto;
-  margin-top: 15px;
-  height: 120px;
-  width: 310px;
-  color: #fff;
 
 }
 
@@ -213,12 +179,6 @@ body {
   padding: 20px;
 }
 
-
-.main-content__caja0 h1 {
-  padding: 20px;
-}
-
-
 .main-content__caja1-h2 a {
   color: #fff;
   text-decoration: none;
@@ -230,12 +190,14 @@ body {
   font-size: 30px;
   padding: 5px;
   margin: 10px;
+
+
 }
 
 .derecha__caja li {
 
     list-style: none;
-    border-bottom: 0.5px solid grey;
+    border: 0.5px solid grey;
 }
 
 .derecha__caja li a {
@@ -247,7 +209,9 @@ body {
   margin: 10px;
 }
 
-
+.derecha__caja-hr {
+  color: red;
+}
 
 .derecha__caja-li:hover > a {
   color: #ccc;

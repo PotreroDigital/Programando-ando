@@ -2,17 +2,8 @@
 session_start();
 $user_name = $_SESSION["user"];
 if ($q= mysqli_connect("127.0.0.1", "root", "")) {
+    $id =  $_GET["id"];
     mysqli_select_db($q, "prueba");
-    $consulta = "SELECT * FROM comentarios WHERE post_id=$id";
-        if ($reg = mysqli_query($q, $consulta)) {
-          $datos = mysqli_fetch_array($reg);
-
-
-
-        } else {
-          echo "error al enviar consulta";
-        }
-    $id = (int) $_GET["id"];
 } else {
   echo "error al conectar a base de datos";
 }
@@ -49,6 +40,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
               if ($reg = mysqli_query($q, $consulta)) {
                 $datos = mysqli_fetch_array($reg);
                 $post_id = $datos["id"];
+                $id_number = $id;
 
 
               } else {
@@ -69,6 +61,7 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
         <div class="main-content__caja1">
           <form class="main-content__caja1-form" action="configuracion/config_comment.php " method="post">
             <h3>comentar</h3>
+            <input type="hidden" name="id_number" value="<?php echo $id_number; ?>">
             <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
             <input type="hidden" name="name_user" value="<?php echo $user_name; ?>">
             <textarea name="contenido" rows="8" cols="180"></textarea>
@@ -79,13 +72,23 @@ if ($q= mysqli_connect("127.0.0.1", "root", "")) {
 
         </div>
         <?php
+        $consulta = "SELECT * FROM comentarios WHERE post_id = '$id' ORDER BY id DESC";
+            if ($reg = mysqli_query($q, $consulta)) {
 
-        echo'
-      <div class="main-content__caja1">
-        <h3 class="main-content__caja1-h2"> Comment by '.$datos["nombre_user"].'</h3>
-        <br>
-        <p class="main-content__caja1-p"> '.$datos["comentario"].'</p>
-      </div>';
+              while ($datos = mysqli_fetch_array($reg)) {
+                  echo'
+                  <div class="main-content__caja1">
+                  <h3 class="main-content__caja1-h2"> Comment by '.$datos["nombre_user"].'</h3>
+                  <br>
+                  <p class="main-content__caja1-p"> '.$datos["comentario"].'</p>
+                  </div>';
+
+              };
+
+            } else {
+              echo "error al enviar consulta";
+            };
+
 
       ?>
 

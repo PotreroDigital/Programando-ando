@@ -1,6 +1,6 @@
 <?php
 session_start();
-$user_session = $_SESSION["pass"];
+$user_session = $_SESSION["user"];
 $conexion = mysqli_connect("127.0.0.1", "root", "");
 $usuario = $_POST["usuario"];
 $correo = $_POST["correo"];
@@ -11,7 +11,7 @@ $contraseña1 = $_POST["password1"];
 mysqli_select_db($conexion, "prueba");
 
 $q = "SELECT * FROM usuarios";
-$new_q = "UPDATE usuarios SET usuario='$usuario', correo='$correo', contraseña='$new_password' WHERE contraseña='$user_session'";
+$new_q = "UPDATE usuarios SET usuario='$usuario', correo='$correo', contraseña='$new_password' WHERE usuario='$user_session'";
 
 if($contraseña1 == $contraseña2) {
   $reg = mysqli_query($conexion, $q);
@@ -23,6 +23,13 @@ if($contraseña1 == $contraseña2) {
       echo "ese correo ya esta en la base de datos";
       exit();
     }
+  }
+  if (empty($usuario)) {
+    $orden = "UPDATE usuario SET correo='$correo', contraseña='$new_password' WHERE usuario='$user_session'";
+    mysqli_query($conexion, $orden);
+  } elseif (empty($correo)) {
+    $orden = "UPDATE usuario SET usuario='$usuario', contraseña='$new_password' WHERE usuario='$user_session'";
+    mysqli_query($conexion, $orden);
   }
 
   if (mysqli_query($conexion, $new_q)) {

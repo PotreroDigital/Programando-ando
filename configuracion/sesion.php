@@ -9,7 +9,8 @@ if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
   if ($q= "SELECT*FROM usuarios WHERE usuario='$usuario' AND contraseña='$contraseña'") {
     $reg= mysqli_query($conexion, $q);
     $datos= mysqli_fetch_array($reg);
-    $datos["correo"] = $mail;
+    $mail = $datos["correo"];
+    $level = $datos["user_level"];
 
     if  ($datos["usuario"] != $usuario or $datos["contraseña"] != $contraseña ){
       echo "Usuario o Contraseña incorrecta";
@@ -18,6 +19,7 @@ if($conexion = mysqli_connect("127.0.0.1", "root", "")) {
       $_SESSION["user"] = $usuario;
       $_SESSION["pass"] = $contraseña;
       $_SESSION["mail"] = $mail;
+      $_SESSION["level"] = $level;
 
       header("Location: ../home.php");
 

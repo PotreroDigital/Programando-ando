@@ -2,7 +2,6 @@
   font-weight: 100;
 
 }
-
 html {
   min-height: 100%;
   position: relative;
@@ -35,12 +34,17 @@ body {
   grid-template-columns: repeat(auto-fit, 1fr);
 
 
+
+
+
 }
 
 
 
 .grid-item {
   padding: 20px;
+
+
 
   }
 
@@ -78,7 +82,7 @@ body {
 
 .grid-derecha {
   background-color: #030303;
-  grid-area: right;
+  grid-area: right
 }
 
 .grid-header__li {
@@ -96,19 +100,6 @@ body {
 .grid-header__li:hover > a {
   color: #ccc;
 }
-.main-content__caja0 {
-  background-color: #1A1A1B;
-  display:block;
-  box-sizing: border-box;
-  height: auto;
-  width: 590px;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: #fff;
-  border: 0.5px solid grey;
-
-}
 
 .main-content__caja1 {
   background-color: #1A1A1B;
@@ -125,6 +116,27 @@ body {
 
 }
 
+.main-content__caja1-form h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.main-content__caja1-form input[type="submit"] {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 5px;
+  background-color: #1A1A1B;
+  margin-top: 10px;
+  outline: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  height: 40px;
+  width: 140px;
+  border: 0.5px solid grey;
+  transform: translate(225px);
+}
 
 .caja1 title {
   color: #fff;
@@ -132,72 +144,21 @@ body {
 
 
 .derecha__caja {
-
-  display: block;
-  box-sizing: border-box;
-  margin: auto;
-  margin-top: 15px;
-  height: 410px;
-  width: 310px;
-  color: #fff;
-
-}
-
-.derecha__perfil-name {
   background-color: #1A1A1B;
   display: block;
   box-sizing: border-box;
   border-bottom: 0.5px solid grey;
   margin: auto;
-  height: auto;
+  height: 420px;
   width: 310px;
   color: #fff;
   border: 0.5px solid grey;
-}
 
-
-.derecha__perfil-name h3 {
-  padding: 15px;
-  font-size: 23px;
-}
-
-.derecha__perfil-post a  {
-  background-color: #1A1A1B;
-  display: block;
-
-  margin: auto;
-  margin-top: 15px;
-  height: 100;
-  width: 310px;
-  color: #fff;
-  text-decoration: none;
-  padding: 20px;
-  font-size: 25px;
-  color: #fff;
-  text-align: center;
-
-}
-
-.derecha__perfil-post:hover > a {
-  border: 0.5px solid grey;
-}
-
-
-
-.derecha__perfil-box {
-  background-color: ##030303;
-  display: block;
-  box-sizing: border-box;
-  margin: auto;
-  margin-top: 15px;
-  height: 120px;
-  width: 310px;
-  color: #fff;
 
 }
 
 .space-box {
-  background-color:  ##1A1A1B;
+  background-color:  #030303;
   display:block;
   box-sizing: border-box;
   height: 120px;
@@ -211,17 +172,18 @@ body {
 
 .main-content__caja1-h2 {
   padding: 20px;
+  text-align: center;
+  font-size: 50px;
 }
 
-
-.main-content__caja0 h1 {
-  padding: 20px;
-}
-
-
-.main-content__caja1-h2 a {
+.main-content__caja1-a {
+  box-sizing: border-box;
+  position: absolute;
+  transform: translate(210px);
   color: #fff;
   text-decoration: none;
+  text-align: center;
+  font-size: 25px;
 
 }
 
@@ -230,12 +192,14 @@ body {
   font-size: 30px;
   padding: 5px;
   margin: 10px;
+
+
 }
 
 .derecha__caja li {
 
     list-style: none;
-    border-bottom: 0.5px solid grey;
+    border: 0.5px solid grey;
 }
 
 .derecha__caja li a {
@@ -247,7 +211,9 @@ body {
   margin: 10px;
 }
 
-
+.derecha__caja-hr {
+  color: red;
+}
 
 .derecha__caja-li:hover > a {
   color: #ccc;

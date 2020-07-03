@@ -7,7 +7,7 @@
   $user = $_SESSION["user"];
   if ($conexion = mysqli_connect("127.0.0.1", "root", "")) {
     mysqli_select_db($conexion, "prueba");
-    $consulta = "SELECT * FROM post2 WHERE user_name='$user'";
+    $consulta = "SELECT * FROM post2 WHERE user_name='$user' ORDER BY id DESC";
     $reg = mysqli_query($conexion, $consulta);
 
   } else {
@@ -75,11 +75,23 @@
 
         <div class="derecha__caja">
           <ul>
+            <?php
+            if ($_SESSION["level"] == 1) {
+              echo '
+                <li class="derecha__caja-li"><a href="editar_perfil.php">Editar Perfil</a></li>
+                <li class="derecha__caja-li"><a href="borrar_user.php">Borrar usuarios</a></li>
+                <li class="derecha__caja-li"><a href="borrar.php">eliminar cuenta</a></li>
+                <li class="derecha__caja-li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>';
+
+            } else {
+              echo '<li class="derecha__caja-li"><a href="editar_perfil.php">Editar Perfil</a></li>
+                    <li class="derecha__caja-li"><a href="borrar.php">eliminar cuenta</a></li>
+                    <li class="derecha__caja-li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>';
+            };
 
 
-            <li class="derecha__caja-li"><a href="editar_perfil.html">Editar Perfil</a></li>
-            <li class="derecha__caja-li"><a href="borrar.php">eliminar cuenta</a></li>
-            <li class="derecha__caja-li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
+            ?>
+
           </ul>
         </div>
         <div class="derecha__perfil-box">

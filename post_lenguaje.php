@@ -1,11 +1,18 @@
 <?php
-session_start();
+  session_start();
+  $lenguaje = $_GET["id"];
+  if (empty($_SESSION["pass"])) {
+      echo "sesion no iciada";
+      exit();
+  }
 
-if (empty($_SESSION["pass"])) {
-  header("location: inicio.html");
-}
+  if($q=mysqli_connect("127.0.0.1", "root", "")) {
+      mysqli_select_db($q, "prueba");
+      $consulta = "SELECT * FROM post2 WHERE lenguaje='$lenguaje'";
+      $orden= mysqli_query($q, $consulta);
+    };
+ ?>
 
-?>
 
 
 <!DOCTYPE html>
@@ -13,42 +20,35 @@ if (empty($_SESSION["pass"])) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/posteos1.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
-    <title>Posteos</title>
+    <title>inicio</title>
   </head>
   <body>
     <div class="grid-container">
       <div class="grid-item grid-header">
         <ul class="grid-header__ul">
-          <li class="grid-header__li"><a href="home.php">Inicio</a></li>
-          <li class="grid-header__li"><a href="#">Temas</a></li>
+          <li class="grid-header__li"><a href="#">Inicio</a></li>
+          <li class="grid-header__li"><a href="lenguajes.php">Lenguajes</a></li>
           <li class="grid-header__li"><a href="perfil.php"><?php echo $_SESSION["user"]; ?></a></li>
           <li class="grid-header__li"><a href="configuracion/deslogueo.php">Cerrar Sesion</a></li>
         </ul>
       </div>
       <div class="grid-item grid-main">
+
         <div class="main-content">
-           <div class="main-content__caja1">
-             <form class="main-content__caja1-form" action="configuracion/post_config.php " method="post">
-               <input type="text" name="titulo" value="" placeholder="titulo" required>
-               <textarea name="contenido" rows="8" cols="180" required></textarea>
-               <select class="main-content__caja1-select" name="lenguaje">
-                 <option value="Javascript">Javascript</option>
-                 <option value="PHP">PHP</option>
-                 <option value="Python">Python</option>
-                 <option value="C">C</option>
-                 <option value="C++">C++</option>
+      <?php
+      while ($datos = mysqli_fetch_array($orden)) {
 
-               </select>
-               <input type="submit" name="" value="post">
+        echo '<div class="main-content__caja1">
+                  <h2 class="main-content__caja1-h2"><a  href="post.php?id='.$datos['id'].'">'.$datos['titulo'].'</a></h2>
+              </div>';
 
-             </form>
+      }
+        ?>
 
-           </div>
-
-          <div class="space-box"></div>
+            <div class="space-box"></div>
 
         </div>
       </div>

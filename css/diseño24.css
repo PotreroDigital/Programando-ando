@@ -6,7 +6,7 @@ src: url(C:/xampp/htdocs/proyecto/fonts/px_sans_nouveaux.ttf) format("truetype")
 }
 
 * {
-  
+
 }
 
 body {
@@ -51,7 +51,17 @@ body {
 }
 
 .login_box input[type="text"],
-.login_box input[type="password"] {
+.login_box input[type="password"], {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.formulario input[type="email"] {
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
